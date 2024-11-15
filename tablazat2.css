@@ -1,0 +1,22 @@
+table, td, th {
+    border-bottom: 1px solid gray;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+    min-width: 500px;
+}
+
+tbody tr{
+    text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgb(199, 199, 199);
+}
+
+.reszponzivtablazat {
+    overflow-x: auto;
+}

@@ -1,0 +1,67 @@
+/* Minden html oldalra rákerűl
+Reszponzív - 700px kerüljenek egymás alá a nav, article, aside és a menüpontok egymás mellé
+
+Betütipusok, menü alakítása
+
+Minden táblázatnak saját css*/
+
+header {
+    grid-area: h;
+}
+
+nav {
+    grid-area: n;
+}
+
+article{
+    grid-area: a;
+}
+
+aside {
+    grid-area: as;
+}
+
+footer {
+    grid-area: f;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 
+        "h h h"
+        "n a as"
+        "f f f"
+    ;
+}
+
+@media screen and (max-width: 700px){
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "h"
+            "n"
+            "a" 
+            "as"
+            "f"
+        ;
+    }
+    .reszponzivtablazat {
+        overflow-x: auto;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: auto;
+    }
+    table, td {
+        border: 1px solid gray;
+        padding: 20px;
+        width: 10%;
+    }
+    
+    table th {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
